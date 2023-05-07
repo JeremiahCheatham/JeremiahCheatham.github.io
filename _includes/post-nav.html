@@ -1,42 +1,37 @@
-{% assign sorted_posts = site.posts | where_exp: "post", "post.categories contains page.categories[0]" | sort: "subcategory" | sort: "page" %}
-
-{% for _post in sorted_posts %}
-  {% if _post.url == page.url %}
-    {% assign current_index = forloop.index0 %}
-    {% assign previous_index = current_index | minus: 1 %}
-    {% assign next_index = current_index | plus: 1 %}
-    {% break %}
-  {% endif %}
-{% endfor %}
-
-{% if previous_index > -1%}
-  {% assign previous_post = sorted_posts[previous_index] %}
-{% endif %}
-
-{% if sorted_posts | size < current_index %}
-  {% assign next_post = sorted_posts[next_index] %}
-{% endif %}
+<!-- Navigation buttons at the bottom of the post. -->
 
 <div class="post-navigation d-flex justify-content-between">
-  {% if previous_post %}
+  {% if page.previous.url %}
     <a
-      href="{{ site.baseurl }}{{ previous_post.url }}"
+      href="{{ site.baseurl }}{{ page.previous.url }}"
       class="btn btn-outline-primary"
       prompt="{{ site.data.locales[include.lang].post.button.previous }}"
     >
-      <p>{{ previous_post.title }}</p>
+      <p>{{ page.previous.title }}</p>
     </a>
   {% else %}
-    <div></div>
+    <div
+      class="btn btn-outline-primary disabled"
+      prompt="{{ site.data.locales[include.lang].post.button.previous }}"
+    >
+      <p>-</p>
+    </div>
   {% endif %}
 
-  {% if next_post %}
+  {% if page.next.url %}
     <a
-      href="{{ site.baseurl }}{{ next_post.url }}"
+      href="{{ site.baseurl }}{{page.next.url}}"
       class="btn btn-outline-primary"
       prompt="{{ site.data.locales[include.lang].post.button.next }}"
     >
-      <p>{{ next_post.title }}</p>
+      <p>{{ page.next.title }}</p>
     </a>
+  {% else %}
+    <div
+      class="btn btn-outline-primary disabled"
+      prompt="{{ site.data.locales[include.lang].post.button.next }}"
+    >
+      <p>-</p>
+    </div>
   {% endif %}
 </div>

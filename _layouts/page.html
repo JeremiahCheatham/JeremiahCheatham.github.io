@@ -21,6 +21,9 @@ layout: default
       {% if page.layout == 'page' or page.collection == 'tabs' %}
         {% assign tab_key = page.title | downcase %}
         {% assign title = site.data.locales[lang].tabs[tab_key] | default: page.title %}
+        <h1 class="dynamic-title">
+          {{ title }}
+        </h1>
         <div class="post-content">
           {{ _content }}
         </div>
@@ -33,6 +36,10 @@ layout: default
 
   <!-- panel -->
   <div id="panel-wrapper" class="col-xl-3 pl-2 text-muted">
+    <div class="access">
+      {% include update-list.html lang=lang %}
+      {% include trending-tags.html lang=lang %}
+    </div>
 
     {% for _include in layout.panel_includes %}
       {% assign _include_path = _include | append: '.html' %}
