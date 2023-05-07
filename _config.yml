@@ -193,6 +193,6 @@ exclude:
 #   layouts:
 #     category: category
 #     tag: tag
-#   permalinks:
-#     tag: /tags/:name/
+  permalinks:
+    tag: /tags/:name/
 #     category: /categories/:name/
