@@ -2,7 +2,6 @@
 type: post
 title: The Haskell Programming Language
 categories: [Haskell, Introduction to Haskell]
-tags: [haskell]
 ---
 ## Introduction to Haskell
 

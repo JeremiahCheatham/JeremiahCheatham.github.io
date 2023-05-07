@@ -2,7 +2,6 @@
 type: post
 title: The Python Programming Language
 categories: [Python, Introduction to Python]
-tags: [python]
 ---
 ## Introduction to Python
 

@@ -2,7 +2,6 @@
 type: post
 title: Variables
 categories: [C, Introduction to C]
-tags: [c]
 page: 4
 ---
 ## Variables Overview

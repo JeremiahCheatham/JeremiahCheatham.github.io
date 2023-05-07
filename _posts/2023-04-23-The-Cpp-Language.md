@@ -2,7 +2,6 @@
 type: post
 title: The C++ Programming Language
 categories: [Cpp, Introduction to Cpp]
-tags: [cpp]
 ---
 ## Introduction to C++
 

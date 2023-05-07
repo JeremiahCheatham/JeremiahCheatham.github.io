@@ -2,7 +2,6 @@
 type: post
 title: The Ruby Programming Language
 categories: [Ruby, Introduction to Ruby]
-tags: [ruby]
 ---
 ## Introduction to Ruby
 

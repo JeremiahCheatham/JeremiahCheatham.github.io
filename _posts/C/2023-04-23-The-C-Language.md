@@ -2,7 +2,6 @@
 type: post
 title: The C Programming Language
 categories: [C, Introduction to C]
-tags: [c]
 page: 1
 ---
 ## Introduction to C

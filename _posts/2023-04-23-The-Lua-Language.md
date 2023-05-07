@@ -2,7 +2,6 @@
 type: post
 title: The Lua Programming Language
 categories: [Lua, Introduction to Lua]
-tags: [lua]
 ---
 ## Introduction to Lua
 

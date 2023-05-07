@@ -2,7 +2,6 @@
 type: post
 title: The JavaScript Programming Language
 categories: [JavaScript, Introduction to JavaScript]
-tags: [javascript]
 ---
 ## Introduction to JavaScript
 

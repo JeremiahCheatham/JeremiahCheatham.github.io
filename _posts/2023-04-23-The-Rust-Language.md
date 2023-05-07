@@ -2,7 +2,6 @@
 type: post
 title: The Rust Programming Language
 categories: [Rust, Introduction to Rust]
-tags: [rust]
 ---
 ## Introduction to Rust
 
