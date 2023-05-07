@@ -9,7 +9,7 @@
   {% endif %}
 {% endif %}
 
-{% if page.layout == 'post' or page.layout == 'page' %}
+{% if page.layout == 'post' or page.layout == 'page' or page.layout == 'homepage' %}
   <!-- image lazy-loading & popup & clipboard -->
   {% assign _urls = site.data.assets[origin]['magnific-popup'].js
     | append: ','
@@ -22,6 +22,7 @@
 {% endif %}
 
 {% if page.layout == 'home'
+  or page.layout == 'homepage'
   or page.layout == 'post'
   or page.layout == 'archives'
   or page.layout == 'category'
@@ -47,6 +48,8 @@
     {% assign type = page.layout %}
   {% when 'home', 'archives', 'category', 'tag' %}
     {% assign type = 'misc' %}
+  {% when 'homepage' %}
+    {% assign type = 'post' %}
   {% else %}
     {% assign type = 'commons' %}
 {% endcase %}
