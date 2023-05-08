@@ -36,9 +36,6 @@ layout: default
 
   <!-- panel -->
   <div id="panel-wrapper" class="col-xl-3 pl-2 text-muted">
-    <div class="access">
-      {% include update-list.html lang=lang %}
-    </div>
 
     {% for _include in layout.panel_includes %}
       {% assign _include_path = _include | append: '.html' %}

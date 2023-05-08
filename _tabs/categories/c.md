@@ -2,6 +2,6 @@
 title: C
 category: C
 layout: category
-icon: fas fa-stream
+icon: fas fa-alien-monster
 order: 1
 ---
