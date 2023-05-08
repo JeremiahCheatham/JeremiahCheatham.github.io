@@ -2,6 +2,6 @@
 title: Python
 category: Python
 layout: category
-icon: fas fa-stream
+icon: fa-solid fa-jet-fighter
 order: 6
 ---

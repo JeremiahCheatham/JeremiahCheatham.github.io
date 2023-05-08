@@ -2,6 +2,6 @@
 title: C
 category: C
 layout: category
-icon: fas fa-alien-monster
+icon: fa-brands fa-space-awesome
 order: 1
 ---

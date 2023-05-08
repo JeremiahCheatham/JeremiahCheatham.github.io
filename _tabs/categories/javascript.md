@@ -2,6 +2,6 @@
 title: JavaScript
 category: JavaScript
 layout: category
-icon: fas fa-stream
+icon: fa-solid fa-spaghetti-monster-flying
 order: 4
 ---

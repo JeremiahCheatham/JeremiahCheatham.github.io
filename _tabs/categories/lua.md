@@ -2,6 +2,6 @@
 title: Lua
 category: Lua
 layout: category
-icon: fas fa-stream
+icon: fa-solid fa-ghost
 order: 5
 ---

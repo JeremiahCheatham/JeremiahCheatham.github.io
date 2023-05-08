@@ -2,6 +2,6 @@
 title: Haskell
 category: Haskell
 layout: category
-icon: fas fa-stream
+icon: fa-solid fa-gamepad
 order: 3
 ---

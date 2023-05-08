@@ -2,6 +2,6 @@
 title: Cpp
 category: Cpp
 layout: category
-icon: fas fa-stream
+icon: fa-solid fa-robot
 order: 2
 ---

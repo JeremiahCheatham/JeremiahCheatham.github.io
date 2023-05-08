@@ -2,6 +2,6 @@
 title: Rust
 category: Rust
 layout: category
-icon: fas fa-stream
+icon: fa-solid fa-truck-monster
 order: 8
 ---
