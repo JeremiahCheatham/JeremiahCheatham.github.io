@@ -1,7 +1,7 @@
 ---
 title: Cpp
 category: Cpp
-layout: category
+layout: categories
 icon: fa-solid fa-gun
 order: 2
 ---

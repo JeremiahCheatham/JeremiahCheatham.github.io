@@ -1,7 +1,7 @@
 ---
 title: Rust
 category: Rust
-layout: category
+layout: categories
 icon: fa-solid fa-truck-monster
 order: 8
 ---

@@ -1,7 +1,7 @@
 ---
 title: Lua
 category: Lua
-layout: category
+layout: categories
 icon: fa-solid fa-ghost
 order: 5
 ---

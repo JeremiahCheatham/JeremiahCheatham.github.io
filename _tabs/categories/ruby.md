@@ -1,7 +1,7 @@
 ---
 title: Ruby
 category: Ruby
-layout: category
+layout: categories
 icon: fa-solid fa-user-astronaut
 order: 7
 ---

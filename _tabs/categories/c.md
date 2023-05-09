@@ -1,7 +1,7 @@
 ---
 title: C
 category: C
-layout: category
-icon: fa-brands fa-space-awesome
+layout: categories
+icon: fa-solid fa-gun
 order: 1
 ---
