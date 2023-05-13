@@ -188,6 +188,16 @@ exclude:
   - node_modules
   - package*.json
 
+language:
+  - C
+  - Cpp
+  - Haskell
+  - JavaScript
+  - Lua
+  - Python
+  - Ruby
+  - Rust
+
 jekyll-archives:
   enabled: [categories]
   layouts:

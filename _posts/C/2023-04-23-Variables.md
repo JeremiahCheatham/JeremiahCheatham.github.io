@@ -1,7 +1,8 @@
 ---
 type: post
 title: Variables
-categories: [C, Introduction to C]
+language: [C]
+categories: [Introduction to C]
 page: 4
 ---
 ## Variables Overview

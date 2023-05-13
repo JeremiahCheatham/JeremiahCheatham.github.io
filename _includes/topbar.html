@@ -15,6 +15,13 @@
               {{ site.data.locales[include.lang].tabs.home | capitalize }}
             </a>
           </span>
+          {% if page.language %}
+          <span>
+              <a href="{{ site.baseurl }}/{{ page.language[0] | downcase | replace: ' ', '-'}}">
+                {{ page.language }}
+              </a>
+            </span>
+          {% endif %}
           {% if page.categories[0] %}
             <span>
               <a href="{{ site.baseurl }}/{{ page.categories[0] | downcase | replace: ' ', '-'}}">
@@ -28,6 +35,24 @@
             </span>
           {% endif %}
           <span>{{ page.title }}</span>
+        {% elsif page.type == 'category' %}
+          <span>
+            <a href="{{ '/' | relative_url }}">
+              {{ site.data.locales[include.lang].tabs.home | capitalize }}
+            </a>
+          </span>
+          {% if page.posts[0].language[0] %}
+          <span>
+              <a href="{{ site.baseurl }}/{{ page.posts[0].language[0] | downcase | replace: ' ', '-'}}">
+                {{page.posts[0].language[0] }}
+              </a>
+            </span>
+          {% endif %}
+          {% if page.posts[0].categories[0] %}
+            <span>
+              {{ page.posts[0].categories[0] }}
+            </span>
+          {% endif %}
         {% else %}
           {% for item in paths %}
             {% if forloop.first %}

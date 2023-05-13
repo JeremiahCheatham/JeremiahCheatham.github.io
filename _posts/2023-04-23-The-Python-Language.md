@@ -1,12 +1,13 @@
 ---
 type: post
 title: The Python Programming Language
-categories: [Python, Introduction to Python]
+language: [Python]
+categories: [Introduction to Python]
 ---
 ## Introduction to Python
 
 
-![Desktop View](/posts/20230423/Python-logo.png){: .w-50 .left}
+![Desktop View](/posts/logos/Python-logo.png){: .w-50 .left}
 The C language was created by Dennis Ritche at Bell Labs for use with the Unix operating system. The Unix kernel was rewritten in C. Today every major commerical and open source operating systems kernel is written primarily in C. This list includes Windows, OSX, Linux, Android, IOS, BSD, Playstation, Xbox, Nintendo, Smart TVs, Smart Speakers, Smart Watches and many more.
 
 C is a strongly typed, low-level, imperitive language. This means that variables are explicitly given a datatype when declared. Being low-level C has direct access to memory and system resources. C programs exectute code imparitively as a sequence statements.

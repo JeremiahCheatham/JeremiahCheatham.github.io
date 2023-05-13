@@ -1,7 +1,7 @@
 ---
 title: C
-category: C
+language: C
 layout: categories
-icon: fa-solid fa-gun
+icon: fa-brands fa-space-awesome
 order: 1
 ---

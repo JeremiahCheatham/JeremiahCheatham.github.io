@@ -1,6 +1,6 @@
 ---
 layout: page
-# The Category layout
+# All the Categories of posts
 ---
 
 {% include lang.html %}
@@ -10,14 +10,14 @@ layout: page
 
 {% assign group_index = 0 %}
 
-{% assign posts_of_category = site.categories[page.category] %}
+{% assign posts_of_language = site.posts | where: "language", page.language %}
 {% assign sub_categories = '' | split: '' %}
 
-{% for post in posts_of_category %}
-  {% assign second_category = post.categories[1] %}
-  {% if second_category %}
-    {% unless sub_categories contains second_category %}
-      {% assign sub_categories = sub_categories | push: second_category %}
+{% for post in posts_of_language %}
+  {% assign category = post.categories[0] %}
+  {% if category %}
+    {% unless sub_categories contains category %}
+      {% assign sub_categories = sub_categories | push: category %}
     {% endunless %}
   {% endif %}
 {% endfor %}
@@ -26,34 +26,28 @@ layout: page
 {% assign sub_categories_size = sub_categories | size %}
 
 <div class="card categories">
-  <!-- top-category -->
-  <div
-    id="{{ HEAD_PREFIX }}{{ group_index }}"
-    class="card-header d-flex justify-content-between hide-border-bottom"
-  >
-    <span>
-      <i class="far fa-folder-open fa-fw"></i>
-      {{ page.category }}
-    </span>
-  </div>
-
-  <!-- sub-categories -->
-  <div class="card-body">
-    <ul class="list-unstyled mb-0">
-      {% for sub_category in sub_categories %}
-        {% assign sub_category_name = sub_category %}
-        <li>
-          <i class="far fa-folder fa-fw"></i>
-          {{ sub_category_name }}
-          <!-- posts of subcategory -->
-          <ul>
-            {% assign posts_of_subcategory = posts_of_category | where_exp: "post", "post.categories[1] == sub_category_name" | sort: "page" %}
-            {% for post in posts_of_subcategory %}
-              <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
-            {% endfor %}
-          </ul>
-        </li>
-      {% endfor %}
-    </ul>
-  </div>
+  <!-- categories -->
+  <ul class="list-unstyled mb-0">
+    {% for sub_category in sub_categories %}
+      <div
+        id="{{ HEAD_PREFIX }}{{ group_index }}"
+        class="card-header d-flex justify-content-between hide-border-bottom"
+      >
+        <span>
+          <i class="far fa-folder-open fa-fw"></i>
+          {% capture _sub_ctg_url %}/{{ sub_category | slugify | url_encode }}/{% endcapture %}
+          <a href="{{ _sub_ctg_url | relative_url }}" class="ml-1 mr-2">{{ sub_category }}</a>
+        </span>
+      </div>
+      <!-- posts of category -->
+      <ul>
+        <div class="card-body">
+          {% assign posts_of_subcategory = posts_of_language | where_exp: "post", "post.categories[0] == sub_category" | sort: "page" %}
+          {% for post in posts_of_subcategory %}
+            <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+          {% endfor %}
+        </div>
+      </ul>
+    {% endfor %}
+  </ul>
 </div>

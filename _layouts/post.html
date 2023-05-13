@@ -50,6 +50,13 @@ tail_includes:
           {{ 'Home' }}
         </a>
       </span>
+      {% if page.language[0] %}
+      <span>
+          <a href="{{ site.baseurl }}/{{ page.language[0] | downcase | replace: ' ', '-'}}">
+            {{page.language[0] }}
+          </a>
+        </span>
+      {% endif %}
       {% if page.categories[0] %}
         <span>
           <a href="{{ site.baseurl }}/{{ page.categories[0] | downcase | replace: ' ', '-'}}">
